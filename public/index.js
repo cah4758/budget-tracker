@@ -7,7 +7,8 @@ fetch("/api/transaction")
   })
   .then((data) => {
     // save db data on global variable or as an empty array if no data yet
-    transactions = data || [];
+    transactions = data;
+    console.log(transactions);
 
     populateTotal();
     populateTable();
