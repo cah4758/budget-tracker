@@ -46,7 +46,7 @@ function checkDatabase() {
       })
         .then((response) => response.json())
         .then((res) => {
-          if (resl.length !== 0) {
+          if (res.length !== 0) {
             // Open another transaction with read/write ability
             transaction = db.transaction(["BudgetStore"], "readwrite");
 
