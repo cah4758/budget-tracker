@@ -2,7 +2,7 @@ let db;
 let budgetVersion;
 
 // New request for "budget" DB
-const request = indexedDB.open("BudgetDB", 1);
+const request = indexedDB.open("BudgetDB", budgetVersion || 21);
 
 request.onupgradeneeded = function (e) {
   // Showing updated db version, if needed
